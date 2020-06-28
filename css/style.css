@@ -1,10 +1,6 @@
 @charset "UTF-8";
 /*------------------------------------------------------------------
 [Master Stylesheet]
-Project:	Eric
-++++ Imports ++++
-++++ Reset ++++
-++++ Main ++++
 	**Basic Sec CSS**
 	**Body Sec CSS**
 	**About Sec CSS**
@@ -16,9 +12,7 @@ Project:	Eric
 	**Experience Sec CSS**
 	**Client Sec CSS**
 	**Achivement Sec CSS**
-	**Contact Sec CSS**
 	**Footer Sec CSS**
-++++ Mediaqueries ++++
 -------------------------------------------------------------------*/
 /****************************/
 /** Imports **/
@@ -33,7 +27,6 @@ Project:	Eric
 @import url(inputtext.css);
 @import url(filter.css);
 @import url(default-skin/default-skin.css);
-@import url(lightgallery.css);
 /****************************/
 /** Reset **/
 /****************************/
@@ -77,11 +70,11 @@ ul {
   list-style: none; }
 
 a {
-  color: #303133;
+  color: #ffffff;
   text-decoration: none; }
 
 a:hover {
-  color: #303133;
+  color: #c7c2c2;
   text-decoration: none; }
 
 a:focus {
@@ -899,80 +892,6 @@ a.goto-social, a.goto-social:hover {
   float: left;
   width: 70%; }
 
-/********Contact Sec CSS********/
-.contact-wrap .form-control {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background: transparent none repeat scroll 0 0;
-  border: none;
-  box-shadow: none;
-  color: #fff;
-  display: block;
-  overflow: hidden;
-  font-size: 13px;
-  padding-left: 0;
-  padding-bottom: 18px;
-  padding-top: 13px; }
-  .contact-wrap .form-control:focus {
-    border-color: #fff;
-    box-shadow: none; }
-  .contact-wrap .form-control::-webkit-input-placeholder {
-    color: #ccc;
-    font-size: 13px;
-    text-transform: capitalize; }
-  .contact-wrap .form-control:-moz-placeholder {
-    /* Firefox 18- */
-    color: #8d8d8d;
-    font-size: 13px;
-    text-transform: capitalize; }
-  .contact-wrap .form-control::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #8d8d8d;
-    font-size: 13px;
-    text-transform: capitalize; }
-  .contact-wrap .form-control:-ms-input-placeholder {
-    color: #8d8d8d;
-    font-size: 13px;
-    text-transform: capitalize; }
-  .contact-wrap .form-control input:-webkit-autofill, .contact-wrap .form-control textarea:-webkit-autofill, .contact-wrap .form-control select:-webkit-autofill {
-    background-color: transparent;
-    background-image: none;
-    color: #fff; }
-.contact-wrap .form-group {
-  margin-bottom: 36px; }
-.contact-wrap .form-horizontal .form-group {
-  margin-left: 0;
-  margin-right: 0; }
-.contact-wrap .input-wrap {
-  overflow: hidden;
-  position: relative; }
-.contact-wrap .input-wrap i {
-  display: none; }
-.contact-wrap input {
-  height: 80px; }
-.contact-wrap .btn {
-  background: #fff;
-  color: #303133; }
-  .contact-wrap .btn:hover, .contact-wrap .btn:focus, .contact-wrap .btn:active {
-    background: #fff !important;
-    color: #fff !important; }
-  .contact-wrap .btn .mask {
-    background-color: #c8a482; }
-.contact-wrap .email-direct {
-  font-size: 14px;
-  margin-top: 60px; }
-  .contact-wrap .email-direct p {
-    color: #ccc; }
-    .contact-wrap .email-direct p a {
-      color: #fff;
-      font-weight: 500; }
-.contact-wrap .bg-success, .contact-wrap .bg-danger {
-  background: none; }
-.contact-wrap .bg-success {
-  color: #c8a482; }
-
 /********Footer Sec CSS********/
 @-webkit-keyframes blinking {
   0% {
@@ -1093,37 +1012,6 @@ footer .copywrite-wrap {
     footer .copywrite-wrap .copywrite b {
       font-weight: 500;
       color: #fff; }
-footer .goto-top {
-  width: 100%; }
-  footer .goto-top a {
-    color: #fff;
-    font-size: 11px;
-    font-family: "Poppins", sans-serif;
-    display: inline-block;
-    overflow: hidden;
-    text-transform: uppercase;
-    text-decoration: underline; }
-    footer .goto-top a span {
-      line-height: 16px;
-      text-decoration: underline;
-      display: inline-block;
-      position: relative;
-      -moz-transition: transform 0.3s ease 0s;
-      -o-transition: transform 0.3s ease 0s;
-      -webkit-transition: transform 0.3s ease 0s;
-      transition: transform 0.3s ease 0s; }
-      footer .goto-top a span:before {
-        content: attr(data-hover);
-        position: absolute;
-        top: 100%;
-        transform: translateY(0px);
-        -webkit-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        text-decoration: underline; }
-    footer .goto-top a:hover span {
-      transform: translateY(-100%);
-      -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%); }
 
 /****************************/
 /** Mediaqueries **/
