@@ -1,28 +1,3 @@
-// The MIT License (MIT)
-
-// Typed.js | Copyright (c) 2014 Matt Boldt | www.mattboldt.com
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
-
-
-
 ! function($) {
 
     "use strict";
@@ -137,13 +112,6 @@
             var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
             var self = this;
 
-            // ------------- optional ------------- //
-            // backpaces a certain string faster
-            // ------------------------------------ //
-            // if (self.arrayPos == 1){
-            //  self.backDelay = 50;
-            // }
-            // else{ self.backDelay = 500; }
 
             // contain typing function in a timeout humanize'd delay
             self.timeout = setTimeout(function() {
@@ -257,18 +225,6 @@
 
             self.timeout = setTimeout(function() {
 
-                // ----- this part is optional ----- //
-                // check string array position
-                // on the first string, only delete one word
-                // the stopNum actually represents the amount of chars to
-                // keep in the current string. In my case it's 14.
-                // if (self.arrayPos == 1){
-                //  self.stopNum = 14;
-                // }
-                //every other time, delete the whole typed string
-                // else{
-                //  self.stopNum = 0;
-                // }
 
                 if (self.contentType === 'html') {
                     // skip over html tags while backspacing
@@ -342,23 +298,6 @@
             return array;
         }
 
-        // Start & Stop currently not working
-
-        // , stop: function() {
-        //     var self = this;
-
-        //     self.stop = true;
-        //     clearInterval(self.timeout);
-        // }
-
-        // , start: function() {
-        //     var self = this;
-        //     if(self.stop === false)
-        //        return;
-
-        //     this.stop = false;
-        //     this.init();
-        // }
 
         // Reset and rebuild the element
         ,
