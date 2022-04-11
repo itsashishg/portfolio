@@ -188,7 +188,7 @@ var eric = function () {
   $("#typed").typed({
     //strings: ["^2100&nbsp;I Am Ashish.<br/>3rd Year B.Tech Student<br/> Major in Cloud Computing."],
     strings: [
-      "^2100&nbsp;I Am Ashish.<br>Graduate Engineer Trainee (Software)</br> Addverb Technologies",
+      "^2100&nbsp;I Am Ashish.<br>Software Developer</br> Addverb Technologies",
     ],
     typeSpeed: 30,
     backDelay: 750,
