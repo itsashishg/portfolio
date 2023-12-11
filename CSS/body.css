@@ -104,9 +104,15 @@ body {
     box-shadow: -7px 7px var(--main-blue);
 }
 
-.soc-link {
-    text-decoration: none;
+.text-blue {
     color: aliceblue;
+}
+
+.exp-box {
+    min-width: 300px !important;
+    min-height: 120px !important;
+    width: 20.5% !important;
+    overflow: hidden;
 }
 
 .longer-soc-box {
@@ -218,8 +224,7 @@ body {
 .info-a {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    padding: 80px 200px;
-    padding-top: 40px;
+    padding: 40px 70px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -246,11 +251,6 @@ body {
     text-align: center;
 }
 
-.skills-heading {
-    margin-top: 50px;
-    cursor: default;
-}
-
 .education-content,
 .skills-content {
     color: var(--main-white);
@@ -263,60 +263,6 @@ body {
 .skills-content,
 .skills-heading :hover {
     cursor: default;
-}
-
-.edu-link {
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-    color: var(--main-white)e;
-}
-
-.edu-link:hover {
-    color: var(--main-blue);
-}
-
-.contact-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-}
-
-.contact_info {
-    color: aliceblue;
-    font-size: 25px;
-    margin-bottom: 50px;
-    border: 1px solid var(--main-white);
-    padding: 10px;
-    /* border-radius: 10px; */
-    cursor: pointer;
-    animation: fadeIncx 1s, shadower 2s infinite;
-    /* animation-iteration-count: infinite; */
-    box-shadow: -5px 5px var(--main-blue);
-    border-radius: 10px;
-}
-
-@keyframes shadower {
-    0% {
-        box-shadow: -7px 7px var(--main-blue);
-    }
-
-    25% {
-        box-shadow: 7px 7px var(--main-blue);
-    }
-
-    50% {
-        box-shadow: 7px -7px var(--main-blue);
-    }
-
-    75% {
-        box-shadow: -7px -7px var(--main-blue);
-    }
-
-    100% {
-        box-shadow: -7px 7px var(--main-blue);
-    }
 }
 
 .icon {
@@ -378,7 +324,8 @@ body {
     cursor: pointer;
 }
 
-.edcert {
+.education-section,
+.exp-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,7 +347,7 @@ body {
     bottom: -7px;
 }
 
-.education .button {
+.education {
     position: relative;
     top: 10px;
     box-shadow: 0px 0px 2 white;
@@ -539,6 +486,10 @@ body {
     padding-left: 3%;
 }
 
+.sub-info {
+    font-size: 12px;
+}
+
 .w-50 {
     width: 50% !important;
 }
@@ -553,4 +504,30 @@ body {
 
 .justify-content-around {
     justify-content: space-around !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+ul {
+    padding: 5px 0px 10px 15px;
+}
+
+li {
+    margin: 2px 0;
+}
+
+.dwnld-btn {
+    position: relative;
+    right: -60px;
+    top: -5px;
 }
