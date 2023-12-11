@@ -34,12 +34,12 @@ header ul li a{
 
 .link:hover {
 
-    color: var(--main-pink);
+    color: var(--main-blue);
 
 }
 
 .current {
-    color: var(--main-pink)
+    color: var(--main-blue)
 }
 
 .button {
@@ -47,7 +47,7 @@ header ul li a{
     border-style: solid;
     border-radius: 50px;
     border-width: 2px;
-    border-color: var(--main-pink);
+    border-color: var(--main-blue);
     text-decoration: none;
     font-weight: 500;
     color: var(--main-white);
@@ -57,8 +57,8 @@ header ul li a{
 
 .button:hover,
 .current-button {
-    border-color: var(--main-pink);
-    background-color: var(--main-pink);
+    border-color: var(--main-blue);
+    background-color: var(--main-blue);
     color: var(--main-grey);
    
 }
@@ -108,7 +108,7 @@ header ul li a{
         border-style: solid;
         border-radius: 50px;
         border-width: 2px;
-        border-color: var(--main-pink);
+        border-color: var(--main-blue);
         text-decoration: none;
         font-weight: 500;
         color: var(--main-white);
@@ -118,8 +118,8 @@ header ul li a{
 
     .button:hover,
 .current-button {
-    border-color: var(--main-pink);
-    background-color: var(--main-pink);
+    border-color: var(--main-blue);
+    background-color: var(--main-blue);
     color: var(--main-grey);
     
 }

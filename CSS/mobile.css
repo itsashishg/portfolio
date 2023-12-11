@@ -29,7 +29,7 @@
   }
 
   .introp{
-    color: var(--main-pink);
+    color: var(--main-blue);
     position: relative;
     bottom: 20%;
     font-size: large;
@@ -52,7 +52,7 @@
     }
 
     .introp{
-      color: var(--main-pink);
+      color: var(--main-blue);
       position: relative;
       bottom: 2%;
       font-size: large;
@@ -81,7 +81,7 @@
     .longer-soc-box{
         width: 150px;
         text-decoration: none;
-        box-shadow:  -5px 5px var(--main-pink);
+        box-shadow:  -5px 5px var(--main-blue);
         height: 35px;
         display: flex;
         align-items: center;
@@ -101,7 +101,7 @@
         border-style: solid;
         border-radius: 50px;
         border-width: 2px;
-        border-color: var(--main-pink);
+        border-color: var(--main-blue);
         text-decoration: none;
         font-weight: 500;
         color: var(--main-white);

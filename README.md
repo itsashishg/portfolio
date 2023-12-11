@@ -1,3 +1,3 @@
-# Personal-Portfolio
+# itsashishg.github.io
 
-Visit -> https://yashchittora.github.io/Personal-Portfolio/HTML/index.html
+This is code for personal website
