@@ -475,6 +475,46 @@ body {
     animation-delay: 2s;
 }
 
+.animatedy:nth-child(11) {
+    animation-delay: 0.2s;
+}
+
+.animatedy:nth-child(12) {
+    animation-delay: 0.4s;
+}
+
+.animatedy:nth-child(13) {
+    animation-delay: 0.6s;
+}
+
+.animatedy:nth-child(14) {
+    animation-delay: 0.8s;
+}
+
+.animatedy:nth-child(15) {
+    animation-delay: 1s;
+}
+
+.animatedy:nth-child(16) {
+    animation-delay: 1.2s;
+}
+
+.animatedy:nth-child(17) {
+    animation-delay: 1.4s;
+}
+
+.animatedy:nth-child(18) {
+    animation-delay: 1.6s;
+}
+
+.animatedy:nth-child(19) {
+    animation-delay: 1.8s;
+}
+
+.animatedy:nth-child(20) {
+    animation-delay: 2s;
+}
+
 .contact-body {
     display: flex;
     flex-direction: column;
@@ -487,7 +527,7 @@ body {
 }
 
 .sub-info {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .w-50 {
