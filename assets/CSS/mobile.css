@@ -41,7 +41,7 @@
   }
 
   .introp {
-    color: var(--main-blue);
+    color: var(--highlight-color);
     position: relative;
     bottom: 20%;
     font-size: large;
@@ -79,7 +79,7 @@
   }
 
   .introp {
-    color: var(--main-blue);
+    color: var(--highlight-color);
     position: relative;
     bottom: 2%;
     font-size: large;
@@ -109,7 +109,7 @@
   .longer-block-container {
     width: 150px;
     text-decoration: none;
-    box-shadow: -5px 5px var(--main-blue);
+    box-shadow: -5px 5px var(--highlight-color);
     height: 35px;
     display: flex;
     align-items: center;

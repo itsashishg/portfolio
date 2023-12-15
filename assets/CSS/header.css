@@ -16,18 +16,18 @@ header ul li {
 }
 
 header ul li a {
-    color: var(--main-white);
+    color: var(--text-color);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease 0s;
 }
 
 .link:hover {
-    color: var(--main-blue);
+    color: var(--highlight-color);
 }
 
 .current {
-    color: var(--main-blue)
+    color: var(--highlight-color)
 }
 
 .button {
@@ -35,18 +35,18 @@ header ul li a {
     border-style: solid;
     border-radius: 50px;
     border-width: 2px;
-    border-color: var(--main-blue);
+    border-color: var(--highlight-color);
     text-decoration: none;
     font-weight: 500;
-    color: var(--main-white);
+    color: var(--text-color);
     transition: all 0.3s ease 0s;
 }
 
 .button:hover,
 .current-button {
-    border-color: var(--main-blue);
-    background-color: var(--main-blue);
-    color: var(--main-grey);
+    border-color: var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: var(--background-color);
 }
 
 @keyframes dis {
@@ -68,7 +68,7 @@ header ul li a {
     }
 
     header ul li a {
-        color: var(--main-white);
+        color: var(--text-color);
         font-weight: 600;
         text-decoration: none;
         transition: all 0.3s ease 0s;
@@ -94,19 +94,19 @@ header ul li a {
         border-style: solid;
         border-radius: 50px;
         border-width: 2px;
-        border-color: var(--main-blue);
+        border-color: var(--highlight-color);
         text-decoration: none;
         font-weight: 500;
-        color: var(--main-white);
+        color: var(--text-color);
         transition: all 0.3s ease 0s;
         font-size: small;
     }
 
     .button:hover,
     .current-button {
-        border-color: var(--main-blue);
-        background-color: var(--main-blue);
-        color: var(--main-grey);
+        border-color: var(--highlight-color);
+        background-color: var(--highlight-color);
+        color: var(--highlight-color);
     }
 
     header ul li {
