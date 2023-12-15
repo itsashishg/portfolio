@@ -1,31 +1,21 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 100px;
-    height: 100px;
-}
-
 .logo {
     height: 70px;
     width: 70px;
     border-radius: 100px;
 }
 
-header ul{
+header ul {
     list-style: none;
     animation: dis 1.5s;
     animation-iteration-count: 1;
 }
 
-
 header ul li {
-
     display: inline-block;
     padding: 10px 20px;
 }
 
-header ul li a{
+header ul li a {
     color: var(--main-white);
     font-weight: 600;
     text-decoration: none;
@@ -33,9 +23,7 @@ header ul li a{
 }
 
 .link:hover {
-
     color: var(--main-blue);
-
 }
 
 .current {
@@ -52,7 +40,6 @@ header ul li a{
     font-weight: 500;
     color: var(--main-white);
     transition: all 0.3s ease 0s;
-    
 }
 
 .button:hover,
@@ -60,26 +47,27 @@ header ul li a{
     border-color: var(--main-blue);
     background-color: var(--main-blue);
     color: var(--main-grey);
-   
 }
 
 @keyframes dis {
-    0%{
+    0% {
         opacity: 0;
         list-style: none;
-        
     }
-    
-    100%{
+
+    100% {
         opacity: 100;
         list-style: none;
-       
     }
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:700px) {
 
-    header ul li a{
+    nav {
+        margin-left: 0;
+    }
+
+    header ul li a {
         color: var(--main-white);
         font-weight: 600;
         text-decoration: none;
@@ -93,7 +81,6 @@ header ul li a{
         align-items: center;
         padding: 10px 20px;
         height: 100px;
-        /* background-color: #fff; */
     }
 
     .logo {
@@ -103,7 +90,6 @@ header ul li a{
     }
 
     .button {
-        /* background-color: rgb(241, 137, 187); */
         padding: 7px 7px;
         border-style: solid;
         border-radius: 50px;
@@ -117,17 +103,15 @@ header ul li a{
     }
 
     .button:hover,
-.current-button {
-    border-color: var(--main-blue);
-    background-color: var(--main-blue);
-    color: var(--main-grey);
-    
-}
-header ul li {
+    .current-button {
+        border-color: var(--main-blue);
+        background-color: var(--main-blue);
+        color: var(--main-grey);
+    }
 
-    display: inline-block;
-    padding: 10px 7px;
-}
+    header ul li {
+        display: inline-block;
+        padding: 10px 7px;
+    }
 
 }
-
