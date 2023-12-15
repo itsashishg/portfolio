@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
     --main-blue: rgb(113 138 149);
@@ -10,12 +9,11 @@
 }
 
 * {
-    font-family: 'montserrat';
+    font-family: "montserrat";
     background-color: var(--main-grey);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -28,16 +26,13 @@ body {
     0% {
         opacity: 0;
         list-style: none;
-
     }
 
     100% {
         opacity: 100;
         list-style: none;
-
     }
 }
-
 
 .index-body {
     display: flex;
@@ -45,7 +40,7 @@ body {
 }
 
 .intro {
-    font-family: 'Silkscreen';
+    font-family: "Silkscreen";
     color: var(--main-white);
     cursor: default;
     font-size: 50px;
@@ -70,7 +65,7 @@ body {
 }
 
 .intro-white {
-    font-family: 'Silkscreen';
+    font-family: "Silkscreen";
     font-size: 50px;
 
     color: var(--main-white);
@@ -97,10 +92,14 @@ body {
     padding: 1%;
     transition: all 0.3s ease;
     flex-wrap: wrap;
+
+    .inner-heading {
+        padding: 2%;
+        width: 100%;
+    }
 }
 
-.soc-box:hover,
-.longer-soc-box:hover {
+.soc-box:hover {
     box-shadow: -7px 7px var(--main-blue);
 }
 
@@ -115,27 +114,19 @@ body {
     overflow: hidden;
 }
 
-.longer-soc-box {
-    width: 220px;
-    text-decoration: none;
-    box-shadow: -5px 5px var(--main-blue);
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid aliceblue;
-    margin: 15px;
-    transition: all 0.3s ease;
-    flex-wrap: wrap;
+.project-box {
+    min-width: 300px !important;
+    min-height: 120px !important;
+    width: 30.5% !important;
+    overflow: hidden;
 }
 
 .cert {
     color: var(--main-blue);
-
 }
 
 .name {
-    font-family: 'Silkscreen';
+    font-family: "Silkscreen";
     font-size: 50px;
     transition: all 0.3s ease 0s;
     text-decoration: none;
@@ -180,7 +171,6 @@ body {
     100% {
         color: #fea4a4;
     }
-
 }
 
 .name:hover {
@@ -188,20 +178,18 @@ body {
 }
 
 .info {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     padding: 100px 0px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .info-white {
     color: var(--main-white);
     font-size: 20px;
-
 }
 
 .info-pink {
@@ -222,7 +210,7 @@ body {
 }
 
 .info-a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     padding: 40px 70px;
     text-align: center;
@@ -301,7 +289,6 @@ body {
     font-size: 16px;
     margin-top: 15px;
     cursor: pointer;
-
 }
 
 .dbutton:hover {
@@ -353,12 +340,11 @@ body {
     box-shadow: 0px 0px 2 white;
 }
 
-.work_body {
+.work-body {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
-    margin-top: 9%;
 }
 
 .animated {
@@ -570,4 +556,16 @@ li {
     position: relative;
     right: -60px;
     top: -5px;
+}
+
+.p-1 {
+    padding: 0.25rem !important;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.mt-2 {
+    margin-top: 0.75rem !important;
 }
