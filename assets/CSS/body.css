@@ -220,7 +220,7 @@ body {
 }
 
 .skills {
-    padding: 50px;
+    padding: 30px;
     padding-top: 0px;
     margin: auto;
     display: flex;
@@ -325,19 +325,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    /* padding: 2%; */
     padding-top: 0;
 }
 
 .education-content {
     position: relative;
     bottom: -7px;
-}
-
-.education {
-    position: relative;
-    top: 10px;
-    box-shadow: 0px 0px 2 white;
 }
 
 .work-body {
@@ -568,4 +562,35 @@ li {
 
 .mt-2 {
     margin-top: 0.75rem !important;
+}
+
+.img-project-1 {
+    background-image: url(../images/project-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    transition: all .6s;
+}
+
+.img-project-1:hover{
+    background-image: url(../images/project-1.1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+
+}
+
+.img-project-2 {
+    background-image: url(../images/project-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    transition: all .6s;
+}
+
+.img-project-2:hover{
+    background-image: url(../images/project-2.2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
 }
