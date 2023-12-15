@@ -54,6 +54,17 @@
   .work-body {
     flex-direction: column;
   }
+
+  .main-section {
+    margin-top: -25%;
+  }
+
+  .button {
+    position: absolute;
+    bottom: 10%;
+    margin: auto;
+    left: 33%;
+  }
 }
 
 
@@ -158,9 +169,9 @@
   }
 
   .button {
-    position: relative;
-    /* bottom: -11px; */
-    top: 1018%;
-    left: -29%;
+    position: absolute;
+    bottom: 5%;
+    margin: auto;
+    left: 33%;
   }
 }
