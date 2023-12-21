@@ -6,6 +6,7 @@
     --highlight-color: rgb(113 138 149);
     --background-color: #24252a;
     --text-color: aliceblue;
+    --toggle-icon-url: url('../images/light-off.png')
 }
 
 * {
@@ -42,19 +43,16 @@ nav {
 }
 
 .theme-icon {
-    position: absolute;
-    top: 40%;
-    right: 0;
+    position: fixed;
+    top: 95%;
+    left: 10px;
 }
 
-.theme-icon {
-    svg {
-        color: var(--text-color);
-    }
-
-    svg path {
-        fill: currentColor;
-    }
+.theme-icon-img {
+    background-image: var(--toggle-icon-url);
+    height: 30px;
+    width: 30px;
+    background-size: contain;
 }
 
 .main-section {

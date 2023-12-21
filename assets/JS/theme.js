@@ -9,10 +9,10 @@ function changeTheme() {
 function updateMode() {
     if (!isDarkModeSet) {
         // e3e3e5
-        document.documentElement.style.cssText = "--background-color: #fff;--text-color: #5b5b5b;--texst-color: #24252a;";
+        document.documentElement.style.cssText = "--background-color: #fff;--text-color: #5b5b5b;--texst-color: #24252a;--toggle-icon-url: url('../images/light-on.png')";
     }
     else {
-        document.documentElement.style.cssText = "--background-color: #24252a;--text-color: aliceblue;";
+        document.documentElement.style.cssText = "--background-color: #24252a;--text-color: aliceblue;--toggle-icon-url: url('../images/light-off.png')";
     }
 }
 
