@@ -28,8 +28,6 @@ $(function () {
   var showLineTimeout;
   var accessible = false;
 
-  var mobileSafari;
-
   var standalone = window.navigator.standalone,
     userAgent = window.navigator.userAgent.toLowerCase(),
     safari = userAgent.indexOf('safari') != -1 && userAgent.indexOf('chrome') == -1,
@@ -42,34 +40,21 @@ $(function () {
   if (firefox) {
     BODY.addClass('is-firefox');
   }
-  if (ios) {
-    safari = true;
-    if (!standalone && safari) {
-      mobileSafari = true;
-
-    } else if (standalone && !safari) {
-      // STANDALONE
-
-    } else if (!standalone && !safari) {
-      // UIWEBVIEW
-
-    };
-  }
-
-  // setTimeout(function () {
-  //   $('.js-overlay ').css({
-  //     display: 'none'
-  //   })
-  // }, 5000)
 
   WIN.on('touchstart', function () {
     isTouchDevice = true;
   })
 
-  resizeHandler();
 
-  // EVENTS
-  /////////
+
+  if (navigator.userAgentData.mobile) {
+    accessible = "somewhat";
+    BODY.addClass('is-more-accessible')
+  }
+  else {
+    resizeHandler();
+  }
+
 
   // UTIL EVENTS
   WIN.on('resize', resizeHandler);
@@ -99,7 +84,8 @@ $(function () {
       touchStartY = touch.pageY;
       cancelAnimationFrame(animRAF);
     }
-  })
+  });
+
   WIN.on('touchmove', function (e) {
     if (!accessible) {
       e.preventDefault();
@@ -115,6 +101,7 @@ $(function () {
       scrollHandler();
     }
   });
+
   WIN.on('touchend', function (e) {
     if (!accessible) {
       if (prevMoved > 15) {
@@ -124,9 +111,7 @@ $(function () {
       }
     }
   })
-  WIN.on('scroll', function (e) {
 
-  })
   WIN.on('mousemove', mousemoveHandler)
 
   WIN.on('keydown', function (e) {
@@ -142,12 +127,13 @@ $(function () {
       })
     }
     scrollHandler()
-  })
+  });
+
   WIN.on('keyup', function (e) {
     $('.js-arc').css({
       display: 'none'
     })
-  })
+  });
 
   $('#canvas').on('click', function () {
     clearTimeout(showLineTimeout)
@@ -176,9 +162,6 @@ $(function () {
     animateScroll($(this).index() * -90, rotation);
   })
 
-  $('.js-gallery-description-box').on('click', function (e) {
-    e.stopPropagation()
-  })
 
   // FUNCTIONS
   ////////////
@@ -354,14 +337,6 @@ $(function () {
   }
   function trimRotation() {
     return Math.max(-1000, Math.min(1000, rotation))
-  }
-  function moveCloseIcon() {
-    if (!smallScreen) {
-      $('.js-close-icon').css({
-        transform: 'translate3d(' + Math.floor(mouseX - 24) + 'px,' + Math.min($('.js-gallery-description-box').offset().top - 30 - window.scrollY, Math.floor(mouseY - 24)) + 'px,0)',
-        right: 'auto'
-      })
-    }
   }
 
   function mousemoveHandler(e) {
