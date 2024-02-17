@@ -46,10 +46,9 @@ $(function () {
   })
 
 
-
-  if (navigator.userAgentData.mobile) {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     accessible = "somewhat";
-    BODY.addClass('is-more-accessible')
+    BODY.addClass('is-more-accessible');
   }
   else {
     resizeHandler();
