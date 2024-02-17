@@ -259,7 +259,7 @@ body:after {
 }
 
 .js-n,
-.js-spiral-overlay {
+.spiral-property-overlay {
   transition: 2s linear .5s;
   pointer-events: none;
 }
@@ -280,13 +280,13 @@ body.is-in .js-n {
   filter: blur(20px);
 }
 
-body.is-in .js-spiral-overlay {
+body.is-in .spiral-property-overlay {
   opacity: 0;
   visibility: hidden;
 }
 
-body.is-in .js-spiral-overlay path,
-body.is-in .js-spiral-overlay rect {
+body.is-in .spiral-property-overlay path,
+body.is-in .spiral-property-overlay rect {
   stroke-width: 0;
   transition: 2s;
 }
@@ -411,7 +411,7 @@ a:active {
   opacity: 0.2;
 }
 
-.js-section {
+.section-container {
   overflow: hidden;
   transform: translateX(100vw, 0, 0);
 }
@@ -421,32 +421,32 @@ a:active {
 }
 
 @media (min-width: 960px) {
-  body:not(.is-firefox) .js-section:not(.active) .js-view-icon {
+  body:not(.is-firefox) .section-container:not(.active) .js-view-icon {
     transition: 0.3s ease-out;
   }
 
-  body:not(.is-firefox) .js-section:hover:not(.active) {
+  body:not(.is-firefox) .section-container:hover:not(.active) {
     border-radius: 6%;
   }
 
-  body:not(.is-firefox) .js-section:hover:not(.active) .js-view-icon {
+  body:not(.is-firefox) .section-container:hover:not(.active) .js-view-icon {
     border-radius: 40px;
   }
 
-  body:not(.is-firefox) .js-section {
+  body:not(.is-firefox) .section-container {
     will-change: background, border-radius;
     transition: 0.3s background, 0.2s border-radius ease-out;
   }
 }
 
-.js-section .hidden-thingy {
+.section-container .hidden-thingy {
   width: 0px;
   will-change: width;
   transition: 0.3s ease-out;
 }
 
 @media (min-width: 960px) {
-  body:not(.is-firefox) .js-section.active .js-view-icon {
+  body:not(.is-firefox) .section-container.active .js-view-icon {
     transition: .3s;
     width: calc(61.80339vw * .6180339 * .6180339 * .6180339 * .6180339 * .6180339);
   }
@@ -456,21 +456,21 @@ body.is-firefox .js-view-icon {
   width: calc(61.80339vw * .6180339 * .6180339 * .6180339 * .6180339 * .6180339);
 }
 
-.js-section.active .js-view-text,
-.js-section.active svg {
+.section-container.active .js-view-text,
+.section-container.active svg {
   visibility: visible;
 }
 
-.js-section.active .js-view-icon:after {
+.section-container.active .js-view-icon:after {
   display: none;
 }
 
-.js-section.active .left-arrow {
+.section-container.active .left-arrow {
   display: none;
 }
 
-.js-spiral-line {
-  background-image: url(images/pattern.png);
+.img-background-spiral {
+  background-image: url(/ui/aassets/images/pattern.png);
   background-size: calc(80px + 8vw);
 }
 
@@ -540,39 +540,6 @@ body.is-firefox .js-view-icon {
   opacity: 1;
 }
 
-.is-gallery {
-  cursor: none;
-  overflow: auto !important;
-}
-
-.is-gallery .js-gallery {
-  visibility: visible;
-  pointer-events: auto;
-  overflow: visible;
-  height: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.is-gallery .js-gallery .js-gallery-image {
-  pointer-events: auto;
-  opacity: 1;
-  visibility: visible;
-}
-
-.is-gallery .js-gallery .js-gallery-image img {
-  transform: translate3d(0, 0, 0);
-  border-radius: 0;
-}
-
-.is-gallery .js-gallery .js-gallery-description-box {
-  cursor: auto !important;
-}
-
-.is-gallery .js-close-icon {
-  right: 0;
-  left: auto !important;
-}
-
 .is-spiraling .js-message {
   opacity: 1;
   visibility: visible;
@@ -597,23 +564,23 @@ body.is-firefox .js-view-icon {
   }
 }
 
-.is-more-accessible .js-spiral-line {
+.is-more-accessible .img-background-spiral {
   display: none;
 }
 
-.is-more-accessible .js-section {
+.is-more-accessible .section-container {
   position: relative !important;
   transform: translate3d(0, 0, 0) !important;
   width: 100vw !important;
 }
 
 @media (max-width: 960px) {
-  .is-more-accessible .js-section {
+  .is-more-accessible .section-container {
     height: 80vh !important;
   }
 }
 
-.is-more-accessible .js-spiral {
+.is-more-accessible .spiral-property {
   position: relative !important;
 }
 
@@ -625,7 +592,7 @@ body.is-firefox .js-view-icon {
   display: none !important;
 }
 
-.is-more-accessible .js-description {
+.is-more-accessible .section-body {
   color: #0B0B0C !important;
   display: block !important;
 }
@@ -8929,6 +8896,10 @@ body.is-firefox .js-view-icon {
 /* Decorations */
 .bx-sh-soft {
   box-shadow: 2px 2px 24px rgba(10, 10, 10, 0.2);
+}
+
+.t-d-strikethrough {
+  text-decoration: line-through;
 }
 
 .after-border:after {

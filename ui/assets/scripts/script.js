@@ -4,8 +4,8 @@ $(function () {
 
   var WIN = $(window);
   var BODY = $("body");
-  var sections = $('.js-section');
-  var spiral = $('.js-spiral')
+  var sections = $('.section-container');
+  var spiral = $('.spiral-property')
 
   var _winW;
   var _winH;
@@ -18,7 +18,6 @@ $(function () {
   var bgColorsArray = [];
   var sectionCount = sections.length;
   var currentSection = 0;
-  var currentSectionName;
   var touchStartY = 0;
   var touchStartX = 0;
   var mouseX = window.innerWidth / 2
@@ -26,8 +25,6 @@ $(function () {
   var moved = 0;
   var prevMoved = 0;
   var animRAF;
-  var animating = false;
-  var isTouchDevice;
   var showLineTimeout;
   var accessible = false;
 
@@ -86,14 +83,10 @@ $(function () {
       moved = -deltaY || 0;
       rotation += Math.max(-10, Math.min(10, moved / -6));
       rotation = trimRotation();
-      if (!BODY.hasClass('is-gallery')) {
-        e.preventDefault();
-        startScrollTimeout()
-        cancelAnimationFrame(animRAF);
-        scrollHandler();
-      } else {
-        moveCloseIcon();
-      }
+      e.preventDefault();
+      startScrollTimeout()
+      cancelAnimationFrame(animRAF);
+      scrollHandler();
     }
   });
 
@@ -109,19 +102,17 @@ $(function () {
   })
   WIN.on('touchmove', function (e) {
     if (!accessible) {
-      if (!BODY.hasClass('is-gallery')) {
-        e.preventDefault()
-        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        prevMoved = moved;
-        moved = ((touchStartY - touch.pageY) + ((touchStartX - touch.pageX) / 2)) * 5;
-        touchStartX = touch.pageX;
-        touchStartY = touch.pageY;
-        rotation += moved / -10;
-        rotation = trimRotation();
-        startScrollTimeout();
-        cancelAnimationFrame(animRAF);
-        scrollHandler()
-      }
+      e.preventDefault();
+      var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+      prevMoved = moved;
+      moved = ((touchStartY - touch.pageY) + ((touchStartX - touch.pageX) / 2)) * 5;
+      touchStartX = touch.pageX;
+      touchStartY = touch.pageY;
+      rotation += moved / -10;
+      rotation = trimRotation();
+      startScrollTimeout();
+      cancelAnimationFrame(animRAF);
+      scrollHandler();
     }
   });
   WIN.on('touchend', function (e) {
@@ -189,58 +180,6 @@ $(function () {
     e.stopPropagation()
   })
 
-  // $('.special-cta').on('click', function (e) {
-  //   if ($(this).parent().parent().hasClass('active')) {
-  //     e.stopPropagation()
-  //     document.body.scrollTop = 0;
-  //     BODY.addClass('is-gallery');
-  //     $('.js-gallery-description').html($('.js-section.active .js-description').html())
-  //     $('.js-gallery-title').html($('.js-section.active .js-section-title').html())
-  //     moveCloseIcon();
-  //     $('.js-gallery img').attr('src', '')
-  //     for (var i = 1; i <= 4; i++) {
-  //       $('.js-gallery img').eq(i - 1).attr('src', 'ui/assets/images/projects/' + currentSectionName + i + '.jpg')
-  //     }
-  //   }
-  // })
-  var viewInterval;
-  // $('.special-cta').on('mouseenter', function () {
-  //   var i = 0;
-  //   var text = "Open";
-  //   var viewText = $('.js-view-text', this)
-  //   viewText.text('');
-  //   clearInterval(viewInterval)
-  //   viewInterval = setInterval(function () {
-  //     if (i > text.length) {
-  //       clearInterval(viewInterval)
-  //     } else {
-  //       viewText.text(viewText.text() + text.substr(i, 1))
-  //     }
-  //     i++;
-  //   }, 60)
-  // })
-  // $('.special-cta').on('mouseleave', function () {
-  //   var i = 0;
-  //   var text = "View";
-  //   var viewText = $('.js-view-text', this)
-  //   viewText.text('');
-  //   clearInterval(viewInterval)
-  //   viewInterval = setInterval(function () {
-  //     if (i > text.length) {
-  //       clearInterval(viewInterval)
-  //     } else {
-  //       viewText.text(viewText.text() + text.substr(i, 1))
-  //     }
-  //     i++;
-  //   }, 60)
-  // })
-  $('.js-gallery').on('click', function () {
-    BODY.removeClass('is-gallery');
-  })
-  $('.js-close-icon').on('click', function () {
-    BODY.removeClass('is-gallery');
-  })
-
   // FUNCTIONS
   ////////////
   function animateScroll(targR, startR, speed) {
@@ -299,6 +238,9 @@ $(function () {
         if (currentNum === 5) {
           currentNum = "PROJECTS"
         }
+        if (currentNum === 6) {
+          currentNum = "CONTACT"
+        }
         $('.js-current').text(currentNum);
         currentSectionName = sections.eq(currentSection).data('project')
         var bg = bgColorsArray[currentSection - 1]
@@ -325,7 +267,7 @@ $(function () {
         $('.js-eye-lid').css({
           fill: color,
         })
-        $('.js-section-title-word span').css({
+        $('.section-container-title-word span').css({
           transitionDelay: 0,
           transition: 0
         })
@@ -426,28 +368,24 @@ $(function () {
     mouseX = e.pageX
     mouseY = e.pageY - window.scrollY
     if (!accessible) {
-      if (BODY.hasClass('is-gallery') && !smallScreen) {
-        moveCloseIcon();
-      } else {
-        var currentSectionEl = $('.js-section.active');
-        var retina = $('.js-eye-retina', currentSectionEl)
-        var pupil = $('.js-eye-pupil', currentSectionEl)
-        var highlight = $('.js-eye-highlight', currentSectionEl)
-        var lid = $('.js-eye-lid', currentSectionEl)
-        if (retina.offset()) {
-          retina.css({
-            transform: 'translate3d(' + (1 - mouseX / retina.offset().left) * -6 + 'px,' + (1 - mouseY / retina.offset().top) * -6 + 'px,0)'
-          })
-          pupil.css({
-            transform: 'translate3d(' + (1 - mouseX / retina.offset().left) * -7 + 'px,' + (1 - mouseY / retina.offset().top) * -7 + 'px,0)'
-          })
-          highlight.css({
-            transform: 'translate3d(' + (1 - mouseX / retina.offset().left) * -2 + 'px,' + (1 - mouseY / retina.offset().top) * -2 + 'px,0)'
-          })
-          lid.css({
-            transform: 'scaleY(' + Math.abs(1 + Math.max(0, (1 - Math.abs(mouseY / retina.offset().top)) * .2)) + ')'
-          })
-        }
+      var currentSectionEl = $('.section-container.active');
+      var retina = $('.js-eye-retina', currentSectionEl)
+      var pupil = $('.js-eye-pupil', currentSectionEl)
+      var highlight = $('.js-eye-highlight', currentSectionEl)
+      var lid = $('.js-eye-lid', currentSectionEl)
+      if (retina.offset()) {
+        retina.css({
+          transform: 'translate3d(' + (1 - mouseX / retina.offset().left) * -6 + 'px,' + (1 - mouseY / retina.offset().top) * -6 + 'px,0)'
+        })
+        pupil.css({
+          transform: 'translate3d(' + (1 - mouseX / retina.offset().left) * -7 + 'px,' + (1 - mouseY / retina.offset().top) * -7 + 'px,0)'
+        })
+        highlight.css({
+          transform: 'translate3d(' + (1 - mouseX / retina.offset().left) * -2 + 'px,' + (1 - mouseY / retina.offset().top) * -2 + 'px,0)'
+        })
+        lid.css({
+          transform: 'scaleY(' + Math.abs(1 + Math.max(0, (1 - Math.abs(mouseY / retina.offset().top)) * .2)) + ')'
+        })
       }
     }
   }
@@ -487,8 +425,7 @@ $(function () {
     spiral.css({
       transformOrigin: spiralOrigin,
       backfaceVisiblity: 'hidden'
-    })
-    // $('.js-total').text(sectionCount)
+    });
 
     sections.each(function (i) {
       if ($('.js-dot').length < sectionCount) {
@@ -517,14 +454,6 @@ $(function () {
       }
     })
     scrollHandler();
-    // $('.js-overlay-line').css({
-    //   transition: '3s ease',
-    //   strokeDashoffset: 0
-    // })
-    // setTimeout(function () {
-    //   BODY.addClass('is-in')
-    // }, 1000)
-
   }
 
   function startScrollTimeout() {
