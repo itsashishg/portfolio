@@ -62,7 +62,7 @@ $(function () {
     if (!accessible) {
       var deltaY = e.deltaY;
       if (windows || linux) {
-        deltaY = e.deltaY * 5;
+        deltaY = e.deltaY * 2;
       }
       moved = -deltaY || 0;
       rotation += Math.max(-10, Math.min(10, moved / -6));
