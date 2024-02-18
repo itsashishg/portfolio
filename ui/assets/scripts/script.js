@@ -49,6 +49,7 @@ $(function () {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     accessible = "somewhat";
     BODY.addClass('is-more-accessible');
+    buildSpiral();
   }
   else {
     resizeHandler();
@@ -392,7 +393,7 @@ $(function () {
         transformOrigin: sectionOrigin,
         backfaceVisiblity: 'hidden',
         transform: 'rotate(' + myRot + 'deg) scale(' + Math.pow(aspect, i) + ') ' + translate
-      })
+      });
       if (i > 0 && bgColorsArray.length < sectionCount) {
         var bg = $(this).css('backgroundColor')
         bg = bg.substr(0, bg.indexOf(')') + 1)

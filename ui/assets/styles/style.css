@@ -469,11 +469,6 @@ body.is-firefox .js-view-icon {
   display: none;
 }
 
-.img-background-spiral {
-  background-image: url(/ui/aassets/images/pattern.png);
-  background-size: calc(80px + 8vw);
-}
-
 .js-eye-lid {
   transition: .2s;
   transform-origin: 50%;
@@ -10924,4 +10919,47 @@ li {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.ring-container {
+  position: relative;
+}
+
+.blinking-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #62bd19;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
+
+.ringring {
+  border: 3px solid #62bd19;
+  -webkit-border-radius: 30px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  -webkit-animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
 }
