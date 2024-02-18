@@ -116,22 +116,16 @@ $(function () {
   WIN.on('keydown', function (e) {
     if (e.keyCode === 39 || e.keyCode === 40 || e.keyCode === 32) {
       cancelAnimationFrame(animRAF);
-      animateScroll((currentSection + 1) * -90, rotation)
+      if (currentSection < 6) {
+        animateScroll((currentSection + 1) * -90, rotation);
+      }
     } else if (e.keyCode === 37 || e.keyCode === 38) {
       cancelAnimationFrame(animRAF);
-      animateScroll((currentSection - 1) * -90, rotation)
-    } else {
-      $('.js-arc').css({
-        display: 'block'
-      })
+      if (currentSection > -1) {
+        animateScroll((currentSection - 1) * -90, rotation);
+      }
     }
     scrollHandler()
-  });
-
-  WIN.on('keyup', function (e) {
-    $('.js-arc').css({
-      display: 'none'
-    })
   });
 
   $('#canvas').on('click', function () {
@@ -231,15 +225,6 @@ $(function () {
           backgroundColor: color,
           color: bg,
         })
-        $('.js-close-bg').css({
-          fill: color,
-        })
-        $('.js-arc').css({
-          backgroundColor: color,
-        })
-        $('.js-close-lines').css({
-          fill: bg,
-        })
         $('.js-eye-pupil').css({
           fill: bg,
         })
@@ -253,15 +238,8 @@ $(function () {
           transitionDelay: 0,
           transition: 0
         })
-        $('.js-gallery-image').css({
-          background: color,
-        })
         $('.js-dots').css({
           color: color,
-        })
-        $('.js-ask').css({
-          color: bg,
-          background: color,
         })
         sections.css({
           color: color,
