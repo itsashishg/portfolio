@@ -63,7 +63,7 @@ $(function () {
     if (!accessible) {
       var deltaY = e.deltaY;
       if (windows || linux) {
-        deltaY = e.deltaY * 2;
+        deltaY = e.deltaY * 5;
       }
       moved = -deltaY || 0;
       rotation += Math.max(-10, Math.min(10, moved / -6));
@@ -104,9 +104,9 @@ $(function () {
 
   WIN.on('touchend', function (e) {
     if (!accessible) {
-      if (prevMoved > 15) {
+      if (prevMoved > 5) {
         animateScroll((currentSection + 1) * -90, rotation)
-      } else if (prevMoved < -15) {
+      } else if (prevMoved < -5) {
         animateScroll((currentSection - 1) * -90, rotation)
       }
     }
