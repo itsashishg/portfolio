@@ -63,7 +63,7 @@ $(function () {
     if (!accessible) {
       var deltaY = e.deltaY;
       if (windows || linux) {
-        deltaY = e.deltaY * 5;
+        deltaY = e.deltaY * 18;
       }
       moved = -deltaY || 0;
       rotation += Math.max(-10, Math.min(10, moved / -6));
@@ -91,7 +91,7 @@ $(function () {
       e.preventDefault();
       var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
       prevMoved = moved;
-      moved = ((touchStartY - touch.pageY) + ((touchStartX - touch.pageX) / 2)) * 5;
+      moved = ((touchStartY - touch.pageY) + ((touchStartX - touch.pageX) / 2)) * 20;
       touchStartX = touch.pageX;
       touchStartY = touch.pageY;
       rotation += moved / -10;
@@ -104,9 +104,9 @@ $(function () {
 
   WIN.on('touchend', function (e) {
     if (!accessible) {
-      if (prevMoved > 5) {
+      if (prevMoved > 15) {
         animateScroll((currentSection + 1) * -90, rotation)
-      } else if (prevMoved < -5) {
+      } else if (prevMoved < -15) {
         animateScroll((currentSection - 1) * -90, rotation)
       }
     }
