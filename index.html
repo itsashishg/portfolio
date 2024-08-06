@@ -2,524 +2,543 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Ashish Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="./ui/assets/images/filler.jpeg">
-  <link rel="stylesheet" type="text/css" href="ui/assets/styles/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="ui/assets/scripts/jquery-2.1.1.min.js"></script>
-  <script src="ui/assets/scripts/mousewheel.js"></script>
+    <meta charset="UTF-8">
+    <title>Ashish Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./ui/assets/images/filler.jpeg">
+    <link rel="stylesheet" type="text/css" href="ui/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="ui/assets/scripts/jquery-2.1.1.min.js"></script>
+    <script src="ui/assets/scripts/mousewheel.js"></script>
 
-  <script type="text/javascript" src="ui/assets/scripts/script.js"></script>
-  <script type="text/javascript" src="ui/assets/scripts/spiral.js"></script>
+    <script type="text/javascript" src="ui/assets/scripts/script.js"></script>
+    <script type="text/javascript" src="ui/assets/scripts/spiral.js"></script>
 </head>
 
 <body class="bg-black ov-h is-in">
-  <div class="js-message pos-f fx-c l-phi6 b-phi7 f-w-700 z-10 op-0 vis-h trs-du-1">
-    <div class="js-hello f-s-xxxxl ms-f-s-xxxl po-e-n m-l--025 ms-m-l--05">
-      Hey 👋🏻
+    <div class="js-message pos-f fx-c l-phi6 b-phi7 f-w-700 z-10 op-0 vis-h trs-du-1">
+        <div class="js-hello f-s-xxxxl ms-f-s-xxxl po-e-n m-l--025 ms-m-l--05">
+            Hey 👋🏻
+        </div>
+        <div class="d-f a-i-end">
+            <a class="d-ib bd-b f-s-s ms-f-s-xs" href="https://linkedin.com/in/itsashishg/">LinkedIn</a><br>
+            <a class="d-ib bd-b f-s-s ms-f-s-xs m-l-phi8" href="mailto:itsashishg@duck.com">Mail</a><br>
+        </div>
     </div>
-    <div class="d-f a-i-end">
-      <a class="d-ib bd-b f-s-s ms-f-s-xs" href="https://linkedin.com/in/itsashishg/">LinkedIn</a><br>
-      <a class="d-ib bd-b f-s-s ms-f-s-xs m-l-phi8" href="mailto:itsashishg@duck.com">Mail</a><br>
+    <div
+        class="js-dots d-ib pos-f r-phi6 ms-r-a ms-l-phi9 t-phi5 ms-t-phi6 h-phi2 ms-h-phi4 fx-c j-c-between m-r-025 z-200">
+        <div class="pos-r d-n ms-d-ib rot-90 w-80px t-o-tl l-05rem t-a-l f-s-xxxs m-b-1">
+            <span class="js-current">1</span>
+            <!-- / <span class="js-total">n</span> -->
+        </div>
+        <div class="js-dot w-0 h-0 ol ol-w-1 circle bg-white op-30"></div>
     </div>
-  </div>
-  <div
-    class="js-dots d-ib pos-f r-phi6 ms-r-a ms-l-phi9 t-phi5 ms-t-phi6 h-phi2 ms-h-phi4 fx-c j-c-between m-r-025 z-200">
-    <div class="pos-r d-n ms-d-ib rot-90 w-80px t-o-tl l-05rem t-a-l f-s-xxxs m-b-1">
-      <span class="js-current">1</span>
-      <!-- / <span class="js-total">n</span> -->
-    </div>
-    <div class="js-dot w-0 h-0 ol ol-w-1 circle bg-white op-30"></div>
-  </div>
-  <canvas id="canvas" class="pos-f t-0 l-0"></canvas>
-  <div class="img-background-spiral pos-f fs t-0 l-0 z-400 d-b po-e-n">
-    <svg class="spiral-property-svg w-fs start" x="0px" y="0px" viewBox="-83.4 155.4 985.9 610"
-      enable-background="new -83.4 155.4 985.9 610" xml:space="preserve">
-      <path class="op-50 svg-spiral-big" id="path2776_2_" sodipodi:start="3.1415927" sodipodi:end="4.712389"
-        sodipodi:ry="281.75464" sodipodi:cx="337.94031" sodipodi:open="true" sodipodi:type="arc" sodipodi:rx="301.58487"
-        sodipodi:cy="2354.0146" fill="none" stroke="#d9cfe6" stroke-width=".1" d="
+    <canvas id="canvas" class="pos-f t-0 l-0"></canvas>
+    <div class="img-background-spiral pos-f fs t-0 l-0 z-400 d-b po-e-n">
+        <svg class="spiral-property-svg w-fs start" x="0px" y="0px" viewBox="-83.4 155.4 985.9 610"
+            enable-background="new -83.4 155.4 985.9 610" xml:space="preserve">
+            <path class="op-50 svg-spiral-big" id="path2776_2_" sodipodi:start="3.1415927" sodipodi:end="4.712389"
+                sodipodi:ry="281.75464" sodipodi:cx="337.94031" sodipodi:open="true" sodipodi:type="arc"
+                sodipodi:rx="301.58487" sodipodi:cy="2354.0146" fill="none" stroke="#d9cfe6" stroke-width=".1" d="
             M630.9,596.6c0.3,0,0.6-0.3,0.6-0.6c0-0.6-0.4-1-1-1c-0.9,0-1.6,0.7-1.6,1.6l0,0c0,1.4,1.2,2.6,2.6,2.6l0,0c2.3,0,4.2-1.9,4.2-4.2
             l0,0c0-3.8-3.1-6.8-6.8-6.8l0,0h0.1l0,0c-6.9,0-12.5,5.6-12.5,12.5v-0.1c0,11.2,9.1,20.3,20.3,20.3l0,0h-0.1l0,0
             c18.3,0,33.1-14.8,33.1-33.1l0,0.6c0-30.3-24.5-54.8-54.8-54.8l0,0l0.1,0l0,0c-48.3,0-87.5,39.2-87.5,87.5v0
             c0,78.8,63.9,142.8,142.8,142.8l0,0l0,0c128.3,0,232.3-104,232.3-232.3l0,0l0,0c0-207.7-168.4-376.1-376.1-376.1l0,0l0.2,0l0,0
             c-336.8,0-609.9,273.1-609.9,609.9" />
-    </svg>
-  </div>
-  <div class="spiral-property pos-f t-0 l-0 fs z-20">
-    <div id="intro" class="section-container pos-a bg-white white bd ms-bd-w-2 ol">
-      <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
-        <span class="section-container-title-word f-s-xxl black">
-          <span>Ashish</span>
-          <span>Gupta</span>
-        </span>
-      </div>
-      <div class="pos-a b-phi6 ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
-        <h1 class="section-container-title h-phi5 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
-          <span class="section-container-title-word m-b-phi9 w-s-nw red">Full</span>
-          <span class="section-container-title-word m-b-phi9 w-s-nw red">Stack</span>
-          <span class="section-container-title-word m-b-phi9 w-s-nw red">Developer</span>
-        </h1>
-        <div class="js-scroll f-s-xs bg-red w-phi3 ms-w-phi6 h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c cur-p">
-          <svg class="w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 37 59.25"
-            enable-background="new 0 0 37 59.25" xml:space="preserve">
-            <rect class="op-20" x="0.5" y="0.5" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" width="36"
-              height="36" />
-            <rect class="op-20" x="14.2508" y="36.5008" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
-              width="22.2492" height="22.2492" />
-            <rect class="op-20" x="0.5002" y="44.9993" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
-              width="13.7507" height="13.7507" />
-            <rect class="op-20" x="0.5" y="36.5" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" width="8.4983"
-              height="8.4983" />
-            <rect class="op-20" x="8.9983" y="36.5008" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
-              width="5.2522" height="5.2522" />
-            <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M0.5,0.5c19.8823,0,36,16.1177,36,36
+        </svg>
+    </div>
+    <div class="spiral-property pos-f t-0 l-0 fs z-20">
+        <div id="intro" class="section-container pos-a bg-white white bd ms-bd-w-2 ol">
+            <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
+                <span class="section-container-title-word f-s-xxl black">
+                    <span>Ashish</span>
+                    <span>Gupta</span>
+                </span>
+            </div>
+            <div class="pos-a b-phi6 ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
+                <h1 class="section-container-title h-phi5 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
+                    <span class="section-container-title-word m-b-phi9 w-s-nw red">Lead</span>
+                    <span class="section-container-title-word m-b-phi9 w-s-nw red">Software</span>
+                    <span class="section-container-title-word m-b-phi9 w-s-nw red">Engineer</span>
+                </h1>
+                <div class="js-scroll f-s-xs bg-red w-phi3 ms-w-phi6 h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c cur-p">
+                    <svg class="w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 37 59.25"
+                        enable-background="new 0 0 37 59.25" xml:space="preserve">
+                        <rect class="op-20" x="0.5" y="0.5" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
+                            width="36" height="36" />
+                        <rect class="op-20" x="14.2508" y="36.5008" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
+                            width="22.2492" height="22.2492" />
+                        <rect class="op-20" x="0.5002" y="44.9993" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
+                            width="13.7507" height="13.7507" />
+                        <rect class="op-20" x="0.5" y="36.5" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
+                            width="8.4983" height="8.4983" />
+                        <rect class="op-20" x="8.9983" y="36.5008" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
+                            width="5.2522" height="5.2522" />
+                        <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M0.5,0.5c19.8823,0,36,16.1177,36,36
                 c0,12.2887-9.9613,22.25-22.2492,22.25c-7.5943,0-13.7507-6.1564-13.7507-13.7507L0.5,44.9983C0.5,40.3048,4.3048,36.5,8.9983,36.5
                 c2.9007,0.0008,5.2522,2.3523,5.2522,5.253" class="svg-spiral"></path>
-          </svg>
-          <div class="p-t-phi9 f-s-s ms-f-s-xs f-w-700 white">Scroll</div>
-          <div class="left-arrow-keys pos-r d-n ms-d-b m-t-phi9 op-30 black">
-            <svg class="w-100p" x="0px" y="0px" viewBox="0 0 69.785 23.613" enable-background="new 0 0 69.785 23.613"
-              xml:space="preserve">
-              <path class="blink" d="M50.628,11.298h17.683c0.81,0,1.474,0.663,1.474,1.474v7.368c0,0.81-0.663,1.474-1.474,1.474H50.628
+                    </svg>
+                    <div class="p-t-phi9 f-s-s ms-f-s-xs f-w-700 white">Scroll</div>
+                    <div class="left-arrow-keys pos-r d-n ms-d-b m-t-phi9 op-30 black">
+                        <svg class="w-100p" x="0px" y="0px" viewBox="0 0 69.785 23.613"
+                            enable-background="new 0 0 69.785 23.613" xml:space="preserve">
+                            <path class="blink" d="M50.628,11.298h17.683c0.81,0,1.474,0.663,1.474,1.474v7.368c0,0.81-0.663,1.474-1.474,1.474H50.628
                 c-0.81,0-1.474-0.663-1.474-1.474v-7.368C49.155,11.961,49.818,11.298,50.628,11.298z" />
-              <path
-                d="M45.208,11.298v8.842c0,0.81-0.663,1.474-1.474,1.474H26.051c-0.81,0-1.474-0.663-1.474-1.474v-8.842H45.208z" />
-              <path d="M1.474,11.298h17.683c0.81,0,1.474,0.663,1.474,1.474v7.368c0,0.81-0.663,1.474-1.474,1.474H1.474
+                            <path
+                                d="M45.208,11.298v8.842c0,0.81-0.663,1.474-1.474,1.474H26.051c-0.81,0-1.474-0.663-1.474-1.474v-8.842H45.208z" />
+                            <path d="M1.474,11.298h17.683c0.81,0,1.474,0.663,1.474,1.474v7.368c0,0.81-0.663,1.474-1.474,1.474H1.474
                 C0.663,21.613,0,20.95,0,20.139l0-7.368C0,11.961,0.663,11.298,1.474,11.298z" />
-              <polygon fill="#FFFFFF" points="11.897,17.924 11.897,14.986 8.733,16.455 " />
-              <polygon fill="#FFFFFF" points="57.888,17.924 57.888,14.986 61.052,16.455 " />
-              <polygon fill="#FFFFFF" points="33.424,15.473 36.361,15.473 34.893,18.637 " />
-              <path
-                d="M45.208,10.315V1.474c0-0.81-0.663-1.474-1.474-1.474L26.051,0c-0.81,0-1.474,0.663-1.474,1.474v8.842H45.208z" />
-              <polygon fill="#FFFFFF" points="33.424,6.14 36.361,6.14 34.893,2.976 " />
-            </svg>
+                            <polygon fill="#FFFFFF" points="11.897,17.924 11.897,14.986 8.733,16.455 " />
+                            <polygon fill="#FFFFFF" points="57.888,17.924 57.888,14.986 61.052,16.455 " />
+                            <polygon fill="#FFFFFF" points="33.424,15.473 36.361,15.473 34.893,18.637 " />
+                            <path
+                                d="M45.208,10.315V1.474c0-0.81-0.663-1.474-1.474-1.474L26.051,0c-0.81,0-1.474,0.663-1.474,1.474v8.842H45.208z" />
+                            <polygon fill="#FFFFFF" points="33.424,6.14 36.361,6.14 34.893,2.976 " />
+                        </svg>
 
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div id="about-me" class="section-container pos-a bg-white black bd ms-bd-w-2 ol">
-      <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
-        <span class="f-s-lx m-b-3">
-          👀
-        </span>
-        <h2 class="w-phi1 ms-w-phi3 bd-c-red l-h-m t-a-r">
-          <p class="t-a-l f-s-body p-r-2 ms-p-r-0 m-t-0 p-t-0">Let's go through a journey of things I've done through
-            this portfolio.
-          </p>
-        </h2>
-      </div>
-      <div class="pos-a b-phi6 ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
-        <h1 class="section-container-title h-phi5 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
-          <span class="section-container-title-word m-b-phi9 w-s-nw d-ib">The</span>
-          <span class="section-container-title-word m-b-phi9 w-s-nw d-ib">work</span>
-          <span class="section-container-title-word m-b-phi9 w-s-nw d-ib">I like to do.</span>
-        </h1>
-        <a href="mailto:itsashishg@duck.com" target="_blank"
-          class="white bg-red js-contact-icon js-view-icon rounded-3 ms-w-0 ov-h">
-          <div class="f-s-xs w-phi3 ms-w-phi6 h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c">
-            <svg class="w-phi5 ms-w-phi8 h-phi5 ms-h-phi8" x="0px" y="0px" viewBox="0 0 36.504 34.423"
-              enable-background="new 0 0 36.504 34.423" xml:space="preserve">
-              <path fill="none" stroke="#F5E9EC" stroke-width="1.5" stroke-miterlimit="10" d="M7.401,32.453v-8.251H1.8
+        <div id="about-me" class="section-container pos-a bg-white black bd ms-bd-w-2 ol">
+            <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
+                <span class="f-s-lx m-b-3">
+                    👀
+                </span>
+                <h2 class="w-phi1 ms-w-phi3 bd-c-red l-h-m t-a-r">
+                    <p class="t-a-l f-s-body p-r-2 ms-p-r-0 m-t-0 p-t-0">Let's go through a journey of things I've done
+                        through
+                        this portfolio.
+                    </p>
+                </h2>
+            </div>
+            <div class="pos-a b-phi6 ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
+                <h1 class="section-container-title h-phi5 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
+                    <span class="section-container-title-word m-b-phi9 w-s-nw d-ib">The</span>
+                    <span class="section-container-title-word m-b-phi9 w-s-nw d-ib">work</span>
+                    <span class="section-container-title-word m-b-phi9 w-s-nw d-ib">I like to do.</span>
+                </h1>
+                <a href="mailto:itsashishg@duck.com" target="_blank"
+                    class="white bg-red js-contact-icon js-view-icon rounded-3 ms-w-0 ov-h">
+                    <div class="f-s-xs w-phi3 ms-w-phi6 h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c">
+                        <svg class="w-phi5 ms-w-phi8 h-phi5 ms-h-phi8" x="0px" y="0px" viewBox="0 0 36.504 34.423"
+                            enable-background="new 0 0 36.504 34.423" xml:space="preserve">
+                            <path fill="none" stroke="#F5E9EC" stroke-width="1.5" stroke-miterlimit="10" d="M7.401,32.453v-8.251H1.8
                 c-0.578,0-1.05-0.473-1.05-1.05V1.8c0-0.578,0.473-1.05,1.05-1.05h32.904c0.578,0,1.05,0.473,1.05,1.05v21.352
                 c0,0.578-0.473,1.05-1.05,1.05H14.752L7.401,32.453z" />
-              <circle style="animation-delay: .6s" fill="#F5E9EC" cx="24.903" cy="12.301" r="1.363" />
-              <circle style="animation-delay: .3s" fill="#F5E9EC" cx="18.677" cy="12.301" r="1.363" />
-              <circle fill="#F5E9EC" cx="12.45" cy="12.301" r="1.363" />
-            </svg>
+                            <circle style="animation-delay: .6s" fill="#F5E9EC" cx="24.903" cy="12.301" r="1.363" />
+                            <circle style="animation-delay: .3s" fill="#F5E9EC" cx="18.677" cy="12.301" r="1.363" />
+                            <circle fill="#F5E9EC" cx="12.45" cy="12.301" r="1.363" />
+                        </svg>
 
-            <div class="pos-r p-t-phi5 ms-p-t-phi8 f-s-s ms-f-s-xs f-w-700">Connect</div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div id="skills" class="section-container js-project pos-a bg-yellow black bd ms-bd-w-2 ol">
-      <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
-        <span class="f-s-lx m-b-3">
-          🧑🏻‍💻
-        </span>
-        <div class="w-phi1 ms-w-phi3 black l-h-m t-a-r">
-          <div class="section-body d-n ms-d-b t-a-l f-s-body">
-            I bring 4 years of experience as a full-stack developer, with a strong passion for crafting intuitive and
-            engaging user experiences.My expertise lies in frontend technologies, where I confidently navigate HTML,
-            CSS, Typescript and JavaScript, including popular frameworks like NextJS and Angular. While my strength lies
-            in front-end development, I possess a firm understanding of back-end principles and have experience working
-            with technologies like Node.js, Java, Spring and REST APIs.
-          </div>
-        </div>
-      </div>
-      <div class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
-        <div class="section-container-title pos-r h-phi5 d-f fx-c j-c-between">
-          <h1 class="section-container-title-word m-b-phi9 w-s-nw f-s-xxxl ms-f-s-xl f-w-700">Skills</h1>
-          <div class="pos-r f-s-s d-f">
-            <div class="d-f">
-              <div class="m-l-1">
-                <ul>
-                  <li>HTML &amp; CSS</li>
-                  <li>JavaScript</li>
-                  <li>TypeScript</li>
-                  <li>Next.js</li>
-                  <li>Angular</li>
-                  <li>React</li>
-                  <li>WordPress</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-              <div class="m-l-3">
-                <ul>
-                  <li>Java</li>
-                  <li>Spring</li>
-                  <li>Node.JS</li>
-                  <li>REST API</li>
-                  <li>Rabbit MQ</li>
-                  <li>DBMS</li>
-                  <li>GIT</li>
-                  <li>Docker</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="special-cta d-f">
-          <div class="hidden-thingy pos-r w-0 h-phi5 ov-h vis-h">
-            <div
-              class="pos-a d-n l-0 t-0 w-phi3 ms-w-phi5 bg-white ov-h h-phi2 ms-h-phi5 fx-c j-c-center a-i-center f-s-xxxs">
-              Go to
-              <span class="d-f">
-                <a class="bd-b" href="https://linkedin.com/in/itsashishg/" target="_blank">LinkedIn
+                        <div class="pos-r p-t-phi5 ms-p-t-phi8 f-s-s ms-f-s-xs f-w-700">Connect</div>
+                    </div>
                 </a>
-                <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                  aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </span>
-              for even more 👀
             </div>
-          </div>
-          <div
-            class="js-view-icon pos-r f-s-xs w-phi3 ms-w-phi7 ov-h h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c rounded-3">
-            <svg class="vis-h w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 33.656 33.656"
-              enable-background="new 0 0 33.656 33.656" xml:space="preserve">
-              <circle class="js-eye-ball" fill="#FFFFFF" cx="16.828" cy="16.828" r="16.828" />
-              <circle class="js-eye-retina" fill="#DC5141" cx="16.828" cy="16.828" r="9.003" />
-              <circle class="js-eye-pupil" fill="#3A3C43" cx="16.828" cy="16.828" r="5.892" />
-              <circle class="js-eye-highlight" fill="#FFFFFF" cx="21.342" cy="12.952" r="3.383" />
-              <g class="js-eye-lid" fill="red">
-                <g>
-                  <path d="M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76
-                      C28.667,17.25,24.745,26.39,16.828,26.39z" />
-                </g>
-                <g>
-                  <path d="M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896
-                      C28.667,16.406,24.745,7.266,16.828,7.266z" />
-                </g>
-              </g>
-            </svg>
-
-            <div class="left-arrow pos-a l-0 t-0 d-f j-c-center a-i-center w-100p h-100p">
-              <svg class="h-phi4 ms-h-phi6" x="0px" y="0px" viewBox="0 0 14.987 52.163"
-                enable-background="new 0 0 14.987 52.163" xml:space="preserve">
-                <line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="7.493" y1="52.163"
-                  x2="7.493" y2="1.414" />
-                <polyline fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10"
-                  points="14.28,8.2 7.493,1.414 0.707,8.2 " />
-              </svg>
+        </div>
+        <div id="skills" class="section-container js-project pos-a bg-yellow black bd ms-bd-w-2 ol">
+            <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
+                <span class="f-s-lx m-b-3">
+                    🧑🏻‍💻
+                </span>
+                <div class="w-phi1 ms-w-phi3 black l-h-m t-a-r">
+                    <div class="section-body d-n ms-d-b t-a-l f-s-body">
+                        I bring 4 years of experience as a full-stack developer, with a strong passion for crafting
+                        intuitive and
+                        engaging user experiences.My expertise lies in frontend technologies, where I confidently
+                        navigate HTML,
+                        CSS, Typescript and JavaScript, including popular frameworks like NextJS and Angular. While my
+                        strength lies
+                        in front-end development, I possess a firm understanding of back-end principles and have
+                        experience working
+                        with technologies like Node.js, Java, Spring and REST APIs.
+                    </div>
+                </div>
             </div>
-            <div class="vis-h js-view-text p-t-phi9 f-s-s ms-f-s-xs f-w-700">See More</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="work-ex" class="section-container js-project pos-a bg-spent color-spent bd ms-bd-w-2 ol">
-      <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
-        <span class="f-s-lx m-b-3">
-          👨🏻‍💼
-        </span>
-        <div class="w-phi1 ms-w-phi3 white l-h-m t-a-r">
-          <div class="section-body d-n ms-d-b t-a-l f-s-body">
-            <span class="f-w-100 f-s-xxs">Previous Works</span>
-            <ul>
-              <li class="m-b-05">
-                <span class="fx-c m-b-025">
-                  <span class="f-w-600 f-s-s">
-                    Graduate Engineer Trainee & Intern
-                  </span>
-                  <span class="d-f">
-                    <a class="bd-b f-s-xxs" href="https://www.addverb.com/" target="_blank">Addverb
-                    </a>
-                    <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </span>
-                </span>
-                <span>
-                  Built both frontend and backend for building Warehouse Management System.
-                </span>
-              </li>
-              <li>
-                <span class="fx-c m-b-025">
-                  <span class="f-w-600 f-s-s">
-                    Summer Intern
-                  </span>
-                  <span class="d-f">
-                    <a class="bd-b f-s-xxs" href="https://prasarbharati.gov.in/doordarshan/" target="_blank">Doordarshan
-                    </a>
-                    <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </span>
-                </span>
-                <span>
-                  Wrote structured,tested and readable code while imbibing industry standards for coding practices.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
-        <div class="section-container-title pos-r h-phi5 w-phi2 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
-          <div class="section-container-title-word m-b-phi9 w-s-nw">Work Experience</div>
-          <div class="pos-r f-s-xxs d-f">
-            <div>
-              <span class="f-w-100 f-s-xxs">Current</span>
-              <span>
-                <span class="fx-c m-b-05">
-                  <span class="f-w-600 f-s-s">
-                    Software Engineer (Core Product)
-                  </span>
-                  <span class="d-f">
-                    <a class="bd-b f-s-xxs" href="www.addverb.com/">Addverb
-                    </a>
-                    <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                      aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </span>
-                </span>
-                <span>
-                  Architected a library while laying down generic processes for reducing development time and increased
-                  performance. Also lead a team of 6 developers.
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="special-cta d-f">
-          <div class="hidden-thingy pos-r w-0 h-phi5 ov-h vis-h">
             <div
-              class="pos-a d-n l-0 t-0 w-phi3 ms-w-phi5 bg-gold color-spent ov-h h-phi2 ms-h-phi5 t-a-c fx-c j-c-center a-i-center f-s-xxxs">
-              It's been a long time <span class="t-d-strikethrough">working</span> learning
-            </div>
-          </div>
-          <div
-            class="js-view-icon pos-r f-s-xs w-phi3 ms-w-phi7 ov-h h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c rounded-3">
-            <svg class="vis-h w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 33.656 33.656"
-              enable-background="new 0 0 33.656 33.656" xml:space="preserve">
-              <circle class="js-eye-ball" fill="#FFFFFF" cx="16.828" cy="16.828" r="16.828" />
-              <circle class="js-eye-retina" fill="#DC5141" cx="16.828" cy="16.828" r="9.003" />
-              <circle class="js-eye-pupil" fill="#3A3C43" cx="16.828" cy="16.828" r="5.892" />
-              <circle class="js-eye-highlight" fill="#FFFFFF" cx="21.342" cy="12.952" r="3.383" />
-              <g class="js-eye-lid" fill="red">
-                <g>
-                  <path d="M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76
+                class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
+                <div class="section-container-title pos-r h-phi5 d-f fx-c j-c-between">
+                    <h1 class="section-container-title-word m-b-phi9 w-s-nw f-s-xxxl ms-f-s-xl f-w-700">Skills</h1>
+                    <div class="pos-r f-s-s d-f">
+                        <div class="d-f">
+                            <div class="m-l-1">
+                                <ul>
+                                    <li>HTML &amp; CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>TypeScript</li>
+                                    <li>Next.js</li>
+                                    <li>Angular</li>
+                                    <li>React</li>
+                                    <li>WordPress</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </div>
+                            <div class="m-l-3">
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Spring</li>
+                                    <li>Node.JS</li>
+                                    <li>REST API</li>
+                                    <li>Rabbit MQ</li>
+                                    <li>DBMS</li>
+                                    <li>GIT</li>
+                                    <li>Docker</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="special-cta d-f">
+                    <div class="hidden-thingy pos-r w-0 h-phi5 ov-h vis-h">
+                        <div
+                            class="pos-a d-n l-0 t-0 w-phi3 ms-w-phi5 bg-white ov-h h-phi2 ms-h-phi5 fx-c j-c-center a-i-center f-s-xxxs">
+                            Go to
+                            <span class="d-f">
+                                <a class="bd-b" href="https://linkedin.com/in/itsashishg/" target="_blank">LinkedIn
+                                </a>
+                                <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor"
+                                    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            for even more 👀
+                        </div>
+                    </div>
+                    <div
+                        class="js-view-icon pos-r f-s-xs w-phi3 ms-w-phi7 ov-h h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c rounded-3">
+                        <svg class="vis-h w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 33.656 33.656"
+                            enable-background="new 0 0 33.656 33.656" xml:space="preserve">
+                            <circle class="js-eye-ball" fill="#FFFFFF" cx="16.828" cy="16.828" r="16.828" />
+                            <circle class="js-eye-retina" fill="#DC5141" cx="16.828" cy="16.828" r="9.003" />
+                            <circle class="js-eye-pupil" fill="#3A3C43" cx="16.828" cy="16.828" r="5.892" />
+                            <circle class="js-eye-highlight" fill="#FFFFFF" cx="21.342" cy="12.952" r="3.383" />
+                            <g class="js-eye-lid" fill="red">
+                                <g>
+                                    <path d="M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76
                       C28.667,17.25,24.745,26.39,16.828,26.39z" />
-                </g>
-                <g>
-                  <path d="M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896
+                                </g>
+                                <g>
+                                    <path d="M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896
                       C28.667,16.406,24.745,7.266,16.828,7.266z" />
-                </g>
-              </g>
-            </svg>
+                                </g>
+                            </g>
+                        </svg>
 
-            <div class="left-arrow pos-a l-0 t-0 d-f j-c-center a-i-center w-100p h-100p">
-              <svg class="h-phi4 ms-h-phi6" x="0px" y="0px" viewBox="0 0 14.987 52.163"
-                enable-background="new 0 0 14.987 52.163" xml:space="preserve">
-                <line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="7.493" y1="52.163"
-                  x2="7.493" y2="1.414" />
-                <polyline fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10"
-                  points="14.28,8.2 7.493,1.414 0.707,8.2 " />
-              </svg>
+                        <div class="left-arrow pos-a l-0 t-0 d-f j-c-center a-i-center w-100p h-100p">
+                            <svg class="h-phi4 ms-h-phi6" x="0px" y="0px" viewBox="0 0 14.987 52.163"
+                                enable-background="new 0 0 14.987 52.163" xml:space="preserve">
+                                <line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="7.493"
+                                    y1="52.163" x2="7.493" y2="1.414" />
+                                <polyline fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10"
+                                    points="14.28,8.2 7.493,1.414 0.707,8.2 " />
+                            </svg>
+                        </div>
+                        <div class="vis-h js-view-text p-t-phi9 f-s-s ms-f-s-xs f-w-700">See More</div>
+                    </div>
+                </div>
             </div>
-            <div class="vis-h js-view-text p-t-phi9 f-s-s ms-f-s-xs f-w-700">View</div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div id="projects" class="section-container js-project pos-a bg-teal color-teal bd ms-bd-w-2 ol">
-      <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
-        <span class="f-s-lx m-b-3">
-          💻
-        </span>
-        <div class="w-phi1 ms-w-phi3 white l-h-m t-a-r">
-          <div class="section-body d-n ms-d-b t-a-l f-s-body">
-            <ul>
-              <li class="fx-c">
-                <span class="d-f">
-                  <a class="bd-b" href="https://itsashishg.github.io/Note-it/">Note-It!
-                  </a>
-                  <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                      clip-rule="evenodd"></path>
-                  </svg>
+        <div id="work-ex" class="section-container js-project pos-a bg-spent color-spent bd ms-bd-w-2 ol">
+            <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
+                <span class="f-s-lx m-b-3">
+                    👨🏻‍💼
                 </span>
-                <span>
-                  New take for note taking. An easy to use application with full rich text editing support, keeps your
-                  notes locally using custom encryption.
-                </span>
-              </li>
-              <li class="fx-c">
-                <span class="d-f">
-                  <a class="bd-b" href="#">Mock-It!
-                  </a>
-                  <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                    aria-hidden="true">
-                    <path fill-rule="evenodd"
-                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </span>
-                <span>
-                  Fully interactive UI to define custom JSON requests as required, which then gives a deployed URL with
-                  the specified body for user to use.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
-        <div class="section-container-title pos-r h-phi5 w-phi3 d-f fx-c j-c-between">
-          <h1 class="f-s-xxxl ms-f-s-xl f-w-700 d-f fx-c">
-            <span class="section-container-title-word m-b-phi9 w-s-nw">Personal</span>
-            <span class="section-container-title-word m-b-phi9 w-s-nw">Projects</span>
-          </h1>
-        </div>
-        <div class="special-cta d-f">
-          <div class="hidden-thingy pos-r w-0 h-phi5 ov-h vis-h">
+                <div class="w-phi1 ms-w-phi3 white l-h-m t-a-r">
+                    <div class="section-body d-n ms-d-b t-a-l f-s-body">
+                        <span class="f-w-100 f-s-xxs">Previous Works</span>
+                        <ul>
+                            <li class="m-b-05">
+                                <span class="fx-c m-b-025">
+                                    <span class="f-w-600 f-s-s">
+                                        Software Engineer - Core Product
+                                    </span>
+                                    <span class="d-f">
+                                        <a class="bd-b f-s-xxs" href="https://www.addverb.com/" target="_blank">Addverb
+                                        </a>
+                                        <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20" fill="currentColor"
+                                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span>
+                                    Built both frontend and backend for building Warehouse Management System.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="fx-c m-b-025">
+                                    <span class="f-w-600 f-s-s">
+                                        Summer Intern
+                                    </span>
+                                    <span class="d-f">
+                                        <a class="bd-b f-s-xxs" href="https://prasarbharati.gov.in/doordarshan/"
+                                            target="_blank">Doordarshan
+                                        </a>
+                                        <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20" fill="currentColor"
+                                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span>
+                                    Wrote structured,tested and readable code while imbibing industry standards for
+                                    coding practices.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div
-              class="pos-a d-n l-0 t-0 w-phi3 ms-w-phi5 bg-twitter-blue white ov-h h-phi2 ms-h-phi5 t-a-c fx-c j-c-center a-i-center f-s-xxxs">
-              <span class="d-f">
-                <a class="bd-b" href="https://github.com/itsashishg/" target="_blank">Github
+                class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
+                <div
+                    class="section-container-title pos-r h-phi5 w-phi2 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
+                    <div class="section-container-title-word m-b-phi9 w-s-nw">Work Experience</div>
+                    <div class="pos-r f-s-xxs d-f">
+                        <div>
+                            <span class="f-w-100 f-s-xxs">Current</span>
+                            <span>
+                                <span class="fx-c m-b-05">
+                                    <span class="f-w-600 f-s-s">
+                                        Lead Software Engineer
+                                    </span>
+                                    <span class="d-f">
+                                        <a class="bd-b f-s-xxs" href="www.addverb.com/">Addverb
+                                        </a>
+                                        <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20" fill="currentColor"
+                                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span>
+                                    Architected a library while laying down generic processes for reducing development
+                                    time and increased
+                                    performance. Also lead a team of 6 developers.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="special-cta d-f">
+                    <div class="hidden-thingy pos-r w-0 h-phi5 ov-h vis-h">
+                        <div
+                            class="pos-a d-n l-0 t-0 w-phi3 ms-w-phi5 bg-gold color-spent ov-h h-phi2 ms-h-phi5 t-a-c fx-c j-c-center a-i-center f-s-xxxs">
+                            It's been a long time <span class="t-d-strikethrough">working</span> learning
+                        </div>
+                    </div>
+                    <div
+                        class="js-view-icon pos-r f-s-xs w-phi3 ms-w-phi7 ov-h h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c rounded-3">
+                        <svg class="vis-h w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 33.656 33.656"
+                            enable-background="new 0 0 33.656 33.656" xml:space="preserve">
+                            <circle class="js-eye-ball" fill="#FFFFFF" cx="16.828" cy="16.828" r="16.828" />
+                            <circle class="js-eye-retina" fill="#DC5141" cx="16.828" cy="16.828" r="9.003" />
+                            <circle class="js-eye-pupil" fill="#3A3C43" cx="16.828" cy="16.828" r="5.892" />
+                            <circle class="js-eye-highlight" fill="#FFFFFF" cx="21.342" cy="12.952" r="3.383" />
+                            <g class="js-eye-lid" fill="red">
+                                <g>
+                                    <path d="M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76
+                      C28.667,17.25,24.745,26.39,16.828,26.39z" />
+                                </g>
+                                <g>
+                                    <path d="M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896
+                      C28.667,16.406,24.745,7.266,16.828,7.266z" />
+                                </g>
+                            </g>
+                        </svg>
+
+                        <div class="left-arrow pos-a l-0 t-0 d-f j-c-center a-i-center w-100p h-100p">
+                            <svg class="h-phi4 ms-h-phi6" x="0px" y="0px" viewBox="0 0 14.987 52.163"
+                                enable-background="new 0 0 14.987 52.163" xml:space="preserve">
+                                <line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="7.493"
+                                    y1="52.163" x2="7.493" y2="1.414" />
+                                <polyline fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10"
+                                    points="14.28,8.2 7.493,1.414 0.707,8.2 " />
+                            </svg>
+                        </div>
+                        <div class="vis-h js-view-text p-t-phi9 f-s-s ms-f-s-xs f-w-700">View</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="section-container js-project pos-a bg-teal color-teal bd ms-bd-w-2 ol">
+            <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
+                <span class="f-s-lx m-b-3">
+                    💻
+                </span>
+                <div class="w-phi1 ms-w-phi3 white l-h-m t-a-r">
+                    <div class="section-body d-n ms-d-b t-a-l f-s-body">
+                        <ul>
+                            <li class="fx-c">
+                                <span class="d-f">
+                                    <a class="bd-b" href="https://itsashishg.github.io/Note-it/">Note-It!
+                                    </a>
+                                    <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor"
+                                        class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                        aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span>
+                                    New take for note taking. An easy to use application with full rich text editing
+                                    support, keeps your
+                                    notes locally using custom encryption.
+                                </span>
+                            </li>
+                            <li class="fx-c">
+                                <span class="d-f">
+                                    <a class="bd-b" href="#">Mock-It!
+                                    </a>
+                                    <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor"
+                                        class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                        aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Fully interactive UI to define custom JSON requests as required, which then gives a
+                                    deployed URL with
+                                    the specified body for user to use.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
+                <div class="section-container-title pos-r h-phi5 w-phi3 d-f fx-c j-c-between">
+                    <h1 class="f-s-xxxl ms-f-s-xl f-w-700 d-f fx-c">
+                        <span class="section-container-title-word m-b-phi9 w-s-nw">Personal</span>
+                        <span class="section-container-title-word m-b-phi9 w-s-nw">Projects</span>
+                    </h1>
+                </div>
+                <div class="special-cta d-f">
+                    <div class="hidden-thingy pos-r w-0 h-phi5 ov-h vis-h">
+                        <div
+                            class="pos-a d-n l-0 t-0 w-phi3 ms-w-phi5 bg-twitter-blue white ov-h h-phi2 ms-h-phi5 t-a-c fx-c j-c-center a-i-center f-s-xxxs">
+                            <span class="d-f">
+                                <a class="bd-b" href="https://github.com/itsashishg/" target="_blank">Github
+                                </a>
+                                <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor"
+                                    class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="js-view-icon pos-r f-s-xs w-phi3 ms-w-phi7 ov-h h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c rounded-3">
+                        <svg class="vis-h w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 33.656 33.656"
+                            enable-background="new 0 0 33.656 33.656" xml:space="preserve">
+                            <circle class="js-eye-ball" fill="#FFFFFF" cx="16.828" cy="16.828" r="16.828" />
+                            <circle class="js-eye-retina" fill="#DC5141" cx="16.828" cy="16.828" r="9.003" />
+                            <circle class="js-eye-pupil" fill="#3A3C43" cx="16.828" cy="16.828" r="5.892" />
+                            <circle class="js-eye-highlight" fill="#FFFFFF" cx="21.342" cy="12.952" r="3.383" />
+                            <g class="js-eye-lid" fill="red">
+                                <g>
+                                    <path d="M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76
+                      C28.667,17.25,24.745,26.39,16.828,26.39z" />
+                                </g>
+                                <g>
+                                    <path d="M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896
+                      C28.667,16.406,24.745,7.266,16.828,7.266z" />
+                                </g>
+                            </g>
+                        </svg>
+
+                        <div class="left-arrow pos-a l-0 t-0 d-f j-c-center a-i-center w-100p h-100p">
+                            <svg class="h-phi4 ms-h-phi6" x="0px" y="0px" viewBox="0 0 14.987 52.163"
+                                enable-background="new 0 0 14.987 52.163" xml:space="preserve">
+                                <line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="7.493"
+                                    y1="52.163" x2="7.493" y2="1.414" />
+                                <polyline fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10"
+                                    points="14.28,8.2 7.493,1.414 0.707,8.2 " />
+                            </svg>
+                        </div>
+                        <div class="vis-h js-view-text p-t-phi9 f-s-s ms-f-s-xs f-w-700">View More</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="section-container pos-a bg-white black bd ms-bd-w-2 ol">
+            <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
+                <div class="ring-container">
+                    <div class="ringring"></div>
+                    <div class="blinking-dot"></div>
+                </div>
+                <div class="w-phi1 ms-w-phi3 t-a-r">
+                    <div class="section-body d-n ms-d-b t-a-l f-s-body">
+                        Excelled as a software developer with 4 years of experience in development, consistently
+                        delivering
+                        high-quality results; expertise in developing dynamic and responsive web applications, creating
+                        reusable
+                        code, and implementing responsive designs to contribute to a challenging position in a dynamic
+                        organization.
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
+                <div class="section-container-title h-phi5 w-phi3 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
+                    <div class="section-container-title-word m-b-phi9 w-s-nw">Actively</div>
+                    <div class="section-container-title-word js-available-adj m-b-phi9 w-s-nw">seeking</div>
+                    <div class="section-container-title-word m-b-phi9 w-s-nw">opportunities.</div>
+                </div>
+                <a href="./ui/assets/Ashish_Gupta_Resume.pdf" target="_blank"
+                    class="white js-view-icon js-contact-icon rounded-3 ms-w-0 ov-h">
+                    <div class="f-s-xs w-phi3 ms-w-phi6 h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c cur-p">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="30pt" height="30pt"
+                                viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#fff"
+                                    stroke="none">
+                                    <path
+                                        d="M1023 4885 c-178 -48 -304 -187 -332 -365 -15 -90 -15 -3830 0 -3920 28 -180 155 -318 336 -365 49 -13 256 -15 1524 -15 955 0 1485 4 1520 10 184 35 330 185 359 370 14 88 14 2952 0 3000 -8 27 -147 172 -628 653 -339 340 -629 625 -644 633 -40 21 -2056 20 -2135 -1z m1979 -668 l3 -462 32 -65 c35 -71 96 -139 158 -175 87 -51 126 -55 587 -55 l428 0 0 -1425 c0 -1573 5 -1460 -65 -1528 -73 -71 22 -67 -1585 -67 -1607 0 -1512 -4 -1585 67 -70 68 -65 -99 -65 2053 0 2152 -5 1985 66 2054 69 67 27 65 1076 65 l947 1 3 -463z m1048 -530 c0 -4 -159 -7 -352 -5 -394 3 -390 3 -445 75 l-28 36 -3 366 -3 366 416 -415 c228 -228 415 -419 415 -423z" />
+                                    <path
+                                        d="M2001 4074 c-126 -34 -228 -119 -289 -243 -36 -73 -37 -77 -37 -191 0 -114 1 -117 38 -192 139 -282 507 -343 720 -119 34 36 71 88 90 128 30 64 32 74 32 183 0 109 -2 119 -32 183 -38 80 -122 173 -191 210 -101 55 -224 70 -331 41z m217 -233 c72 -37 122 -115 122 -192 0 -161 -137 -267 -288 -224 -159 47 -217 250 -104 368 71 75 179 94 270 48z" />
+                                    <path
+                                        d="M1830 3124 c-169 -44 -334 -179 -408 -335 -47 -99 -58 -144 -66 -259 -7 -103 6 -145 53 -177 42 -28 66 -29 109 -3 45 27 62 74 62 164 0 164 86 297 240 370 l65 31 230 0 230 0 65 -31 c94 -45 153 -102 196 -189 33 -67 38 -86 44 -180 7 -115 21 -147 75 -174 25 -12 35 -12 69 0 66 24 81 55 79 165 -4 184 -60 321 -182 444 -87 88 -172 139 -281 169 -66 19 -102 21 -300 20 -162 0 -240 -4 -280 -15z" />
+                                    <path
+                                        d="M1337 1720 c-30 -24 -50 -78 -42 -113 4 -14 20 -38 36 -53 l30 -29 699 -3 c777 -3 755 -4 786 61 23 48 12 98 -27 131 l-31 26 -712 0 c-700 0 -714 0 -739 -20z" />
+                                    <path
+                                        d="M1344 1141 c-20 -12 -37 -34 -44 -55 -16 -49 2 -101 44 -127 30 -18 64 -19 1118 -19 l1086 0 31 26 c57 47 50 137 -13 175 -30 18 -72 19 -1111 19 -1047 0 -1081 -1 -1111 -19z" />
+                                </g>
+                            </svg>
+                        </span>
+
+                        <div class="pos-r p-t-phi5 ms-p-t-phi9 f-s-s ms-f-s-xs f-w-700">Resume</div>
+                    </div>
                 </a>
-                <svg class="m-l-025 a-s-center h-1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                  aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </span>
             </div>
-          </div>
-          <div
-            class="js-view-icon pos-r f-s-xs w-phi3 ms-w-phi7 ov-h h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c rounded-3">
-            <svg class="vis-h w-phi5 ms-w-phi8 start" x="0px" y="0px" viewBox="0 0 33.656 33.656"
-              enable-background="new 0 0 33.656 33.656" xml:space="preserve">
-              <circle class="js-eye-ball" fill="#FFFFFF" cx="16.828" cy="16.828" r="16.828" />
-              <circle class="js-eye-retina" fill="#DC5141" cx="16.828" cy="16.828" r="9.003" />
-              <circle class="js-eye-pupil" fill="#3A3C43" cx="16.828" cy="16.828" r="5.892" />
-              <circle class="js-eye-highlight" fill="#FFFFFF" cx="21.342" cy="12.952" r="3.383" />
-              <g class="js-eye-lid" fill="red">
-                <g>
-                  <path d="M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76
-                      C28.667,17.25,24.745,26.39,16.828,26.39z" />
-                </g>
-                <g>
-                  <path d="M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896
-                      C28.667,16.406,24.745,7.266,16.828,7.266z" />
-                </g>
-              </g>
-            </svg>
-
-            <div class="left-arrow pos-a l-0 t-0 d-f j-c-center a-i-center w-100p h-100p">
-              <svg class="h-phi4 ms-h-phi6" x="0px" y="0px" viewBox="0 0 14.987 52.163"
-                enable-background="new 0 0 14.987 52.163" xml:space="preserve">
-                <line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="7.493" y1="52.163"
-                  x2="7.493" y2="1.414" />
-                <polyline fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10"
-                  points="14.28,8.2 7.493,1.414 0.707,8.2 " />
-              </svg>
-            </div>
-            <div class="vis-h js-view-text p-t-phi9 f-s-s ms-f-s-xs f-w-700">View More</div>
-          </div>
         </div>
-      </div>
     </div>
-    <div id="contact" class="section-container pos-a bg-white black bd ms-bd-w-2 ol">
-      <div class="d-f a-i-start j-c-between m-t-phi6 m-l-phi6 m-r-phi6">
-        <div class="ring-container">
-          <div class="ringring"></div>
-          <div class="blinking-dot"></div>
-        </div>
-        <div class="w-phi1 ms-w-phi3 t-a-r">
-          <div class="section-body d-n ms-d-b t-a-l f-s-body">
-            Excelled as a software developer with 4 years of experience in development, consistently delivering
-            high-quality results; expertise in developing dynamic and responsive web applications, creating reusable
-            code, and implementing responsive designs to contribute to a challenging position in a dynamic organization.
-          </div>
-        </div>
-      </div>
-      <div class="pos-a b-phi6 ms-b-a ms-t-phi2 l-0 w-100p d-f a-i-start j-c-between ms-p-b-phi6 p-l-phi6 p-r-phi6">
-        <div class="section-container-title h-phi5 w-phi3 d-f fx-c j-c-between f-s-xxxl ms-f-s-xl f-w-700">
-          <div class="section-container-title-word m-b-phi9 w-s-nw">Actively</div>
-          <div class="section-container-title-word js-available-adj m-b-phi9 w-s-nw">seeking</div>
-          <div class="section-container-title-word m-b-phi9 w-s-nw">opportunities.</div>
-        </div>
-        <a href="./ui/assets/Ashish_Gupta_Resume.pdf" target="_blank"
-          class="white js-view-icon js-contact-icon rounded-3 ms-w-0 ov-h">
-          <div class="f-s-xs w-phi3 ms-w-phi6 h-phi2 ms-h-phi5 p-t-phi5 ms-p-t-phi8 t-a-c cur-p">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="30pt" height="30pt"
-                viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
-
-                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
-                  <path
-                    d="M1023 4885 c-178 -48 -304 -187 -332 -365 -15 -90 -15 -3830 0 -3920 28 -180 155 -318 336 -365 49 -13 256 -15 1524 -15 955 0 1485 4 1520 10 184 35 330 185 359 370 14 88 14 2952 0 3000 -8 27 -147 172 -628 653 -339 340 -629 625 -644 633 -40 21 -2056 20 -2135 -1z m1979 -668 l3 -462 32 -65 c35 -71 96 -139 158 -175 87 -51 126 -55 587 -55 l428 0 0 -1425 c0 -1573 5 -1460 -65 -1528 -73 -71 22 -67 -1585 -67 -1607 0 -1512 -4 -1585 67 -70 68 -65 -99 -65 2053 0 2152 -5 1985 66 2054 69 67 27 65 1076 65 l947 1 3 -463z m1048 -530 c0 -4 -159 -7 -352 -5 -394 3 -390 3 -445 75 l-28 36 -3 366 -3 366 416 -415 c228 -228 415 -419 415 -423z" />
-                  <path
-                    d="M2001 4074 c-126 -34 -228 -119 -289 -243 -36 -73 -37 -77 -37 -191 0 -114 1 -117 38 -192 139 -282 507 -343 720 -119 34 36 71 88 90 128 30 64 32 74 32 183 0 109 -2 119 -32 183 -38 80 -122 173 -191 210 -101 55 -224 70 -331 41z m217 -233 c72 -37 122 -115 122 -192 0 -161 -137 -267 -288 -224 -159 47 -217 250 -104 368 71 75 179 94 270 48z" />
-                  <path
-                    d="M1830 3124 c-169 -44 -334 -179 -408 -335 -47 -99 -58 -144 -66 -259 -7 -103 6 -145 53 -177 42 -28 66 -29 109 -3 45 27 62 74 62 164 0 164 86 297 240 370 l65 31 230 0 230 0 65 -31 c94 -45 153 -102 196 -189 33 -67 38 -86 44 -180 7 -115 21 -147 75 -174 25 -12 35 -12 69 0 66 24 81 55 79 165 -4 184 -60 321 -182 444 -87 88 -172 139 -281 169 -66 19 -102 21 -300 20 -162 0 -240 -4 -280 -15z" />
-                  <path
-                    d="M1337 1720 c-30 -24 -50 -78 -42 -113 4 -14 20 -38 36 -53 l30 -29 699 -3 c777 -3 755 -4 786 61 23 48 12 98 -27 131 l-31 26 -712 0 c-700 0 -714 0 -739 -20z" />
-                  <path
-                    d="M1344 1141 c-20 -12 -37 -34 -44 -55 -16 -49 2 -101 44 -127 30 -18 64 -19 1118 -19 l1086 0 31 26 c57 47 50 137 -13 175 -30 18 -72 19 -1111 19 -1047 0 -1081 -1 -1111 -19z" />
-                </g>
-              </svg>
-            </span>
-
-            <div class="pos-r p-t-phi5 ms-p-t-phi9 f-s-s ms-f-s-xs f-w-700">Resume</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
 </body>
 <!-- Design from Narrow Designs -->
 
